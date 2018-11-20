@@ -1,8 +1,8 @@
-version: 1.0.4
+version: 1.0.5
 files:
-  - url: screen-2-view-setup-1.0.4.exe
-    sha512: AZMsWK3MEjSl58Fm7enSltsRJvSWBaJ73Tkn6E+LwC96yS9R8K0HRoZiPvfSyv7NPb30m5XoPWxaCFS+6ahm2g==
-    size: 59842069
-path: screen-2-view-setup-1.0.4.exe
-sha512: AZMsWK3MEjSl58Fm7enSltsRJvSWBaJ73Tkn6E+LwC96yS9R8K0HRoZiPvfSyv7NPb30m5XoPWxaCFS+6ahm2g==
-releaseDate: '2018-11-20T19:13:48.508Z'
+  - url: screen-2-view-setup-1.0.5.exe
+    sha512: FkVgBY2DnbA0jFDUBCxvrH0W1xLz2omky6Uli2cgn7wVkBFzKYHOYdcMIS2lbH2Kh0CVTuAI9lTdWeUzt7t/0Q==
+    size: 59842619
+path: screen-2-view-setup-1.0.5.exe
+sha512: FkVgBY2DnbA0jFDUBCxvrH0W1xLz2omky6Uli2cgn7wVkBFzKYHOYdcMIS2lbH2Kh0CVTuAI9lTdWeUzt7t/0Q==
+releaseDate: '2018-11-20T19:22:08.797Z'

@@ -11,7 +11,7 @@
     "appId":"com.joaohcrangel.screen2view",
     "productName":"Screen2View"
   },
-  "repository": "",
+  "repository": "https://github.com/joaohcrangel/electron-screen-2-view.git",
   "author": "João Rangel",
   "devDependencies": {
     "electron": "^3.0.4"

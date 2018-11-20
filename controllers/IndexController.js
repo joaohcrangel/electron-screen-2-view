@@ -10,6 +10,7 @@ class IndexController {
             autoload: true
         });
 
+        this.messageEl = document.querySelector('#message');
         this.inputZoom = document.querySelector('#input-zoom');
         this.btnClearView = document.querySelector('#btn-clear-view');
         this.cardView = document.querySelector('#card-view');
@@ -29,6 +30,12 @@ class IndexController {
             }
 
         });
+
+        ipcRenderer.on('message', (event, message)=>{
+
+            this.setMessage(message);
+
+        })
 
         ipcRenderer.on('change-view', (event, data) => {
 
@@ -288,6 +295,17 @@ class IndexController {
             });
 
         });
+
+    }
+
+    setMessage(text) {
+
+        this.messageEl.innerHTML = text;
+        this.messageEl.style.display = 'block';
+        
+        setTimeout(()=>{
+            this.messageEl.style.display = 'none';
+        }, 10000);
 
     }
 

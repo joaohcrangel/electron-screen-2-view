@@ -1,15 +1,32 @@
 {
   "name": "screen-2-view",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Aplicativo para reprodução de imagens em segunda tela.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "build --dir"
+    "pack": "build --dir",
+    "dist": "electron-builder",
+    "publish": "build -p always"
   },
   "build": {
-    "appId": "com.joaohcrangel.screen2view",
-    "productName": "Screen2View"
+    "appId": "com.github.joaohcrangel.electron-screen-2-view",
+    "productName": "electron-screen-2-view",
+    "mac": {
+      "category": "your.app.category.type",
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "joaohcrangel",
+        "repo": "electron-screen-2-view"
+        
+      }
+    ]
   },
   "repository": "https://github.com/joaohcrangel/electron-screen-2-view.git",
   "author": "João Rangel",
@@ -18,6 +35,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
+    "electron-log": "^2.2.17",
+    "electron-updater": "^4.0.4",
     "jquery": "^3.3.1",
     "material-design-icons": "^3.0.1",
     "materialize-css": "^1.0.0-rc.2",

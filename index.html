@@ -1,28 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src * data:;">
     <meta charset="UTF-8">
     <title>Screen 2 View</title>
     <link rel="stylesheet" href="./node_modules/material-design-icons/iconfont/material-icons.css">
     <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css">
-    <style>
-      .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        padding: 10px;
-      }
-      .grid-item {
-        padding: 20px;
-        font-size: 30px;
-        text-align: center;
-      }
-      .grid-item img {
-        width: 100%;
-      }
-      .card-image {
-        background-color: #000;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/style.css">
   </head>
   <body>
     
@@ -39,7 +23,7 @@
               <div class="col s12">
                 <div class="card">
                   <div class="card-image">
-                    <img id="card-view" src="assets/blank.png" style="width:100%;">
+                    <img id="card-view" src="./assets/blank.png">
                     <a class="btn-floating halfway-fab waves-effect waves-light red" id="btn-clear-view"><i class="material-icons">close</i></a>
                   </div>
                   <div class="card-content">
@@ -67,7 +51,7 @@
       </a>
     </div>
 
-    <input type="file" name="file" id="file" style="display: none;">
+    <input type="file" name="file" id="file">
 
     <script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
     <script>

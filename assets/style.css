@@ -1,0 +1,9 @@
+.card-image {
+    background-color: #000;
+}
+#file {
+    display: none;
+}
+#card-view {
+    width: 100%;
+}

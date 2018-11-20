@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Screen 2 View</title>
+    <link rel="stylesheet" href="./node_modules/material-design-icons/iconfont/material-icons.css">
+    <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css">
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+      }
+      .grid-item {
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+      .grid-item img {
+        width: 100%;
+      }
+      .card-image {
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container-fluid">
+      
+        <div class="row">
+          
+          <div class="col s9">
+            <div class="row" id="list"></div>
+          </div>
+          <div class="col s3">
+
+            <div class="row">
+              <div class="col s12">
+                <div class="card">
+                  <div class="card-image">
+                    <img id="card-view" src="assets/blank.png" style="width:100%;">
+                    <a class="btn-floating halfway-fab waves-effect waves-light red" id="btn-clear-view"><i class="material-icons">close</i></a>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title">No Ar</span>
+                    <form action="#">
+                      <p class="range-field">
+                        <input type="range" id="input-zoom" min="0.1" max="4" step="0.1" value="1" />
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large red waves-effect waves-light" id="btn-add-file">
+        <i class="large material-icons">add</i>
+      </a>
+    </div>
+
+    <input type="file" name="file" id="file" style="display: none;">
+
+    <script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script>
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

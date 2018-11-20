@@ -1,6 +1,6 @@
 {
   "name": "screen-2-view",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Aplicativo para reprodução de imagens em segunda tela.",
   "main": "main.js",
   "scripts": {

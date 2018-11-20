@@ -1,6 +1,0 @@
-directories:
-  output: dist
-  buildResources: build
-appId: com.joaohcrangel.screen2view
-productName: Screen2View
-electronVersion: 3.0.4

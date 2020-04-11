@@ -13,6 +13,7 @@ class IndexController {
         this.messageEl = document.querySelector('#message');
         this.inputZoom = document.querySelector('#input-zoom');
         this.btnClearView = document.querySelector('#btn-clear-view');
+        this.btnRemoveAll = document.querySelector('#btn-remove-all');
         this.cardView = document.querySelector('#card-view');
         this.list = document.querySelector('#list');
         this.inputFile = document.querySelector('#file');
@@ -40,6 +41,14 @@ class IndexController {
         ipcRenderer.on('change-view', (event, data) => {
 
             this.cardView.src = data.dataUrl;
+
+        });
+
+        this.btnRemoveAll.addEventListener('click', e => {
+
+            if (confirm('Deseja realmente remover todas imagens?')) {
+                this.deleteAll();
+            }
 
         });
 
@@ -154,6 +163,27 @@ class IndexController {
 
     }
 
+    deleteAll() {
+
+        return new Promise((resolve, reject) => {
+
+            this.db.remove({}, { multi: true }, (err, n) => {
+
+                if (err) {
+                    reject(err);
+                } else {
+
+                    resolve(n);
+                    this.renderAll();
+
+                }
+
+            });
+
+        });
+
+    }
+
     deleteFile(file) {
 
         return new Promise((resolve, reject) => {
@@ -165,6 +195,7 @@ class IndexController {
                 } else {
 
                     resolve(n);
+                    this.renderAll();
 
                 }
 
@@ -226,6 +257,7 @@ class IndexController {
             <div class="card">
                 <div class="card-image">
                     <img src="${file.content}" alt="${file.name}">
+                    <small>${file.name}</small>
                 </div>
                 <div class="card-action">
                     <button type="button" class="btn-delete btn red waves-effect waves-light"><i class="large material-icons">delete</i></button>

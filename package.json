@@ -24,20 +24,20 @@
         "provider": "github",
         "owner": "joaohcrangel",
         "repo": "electron-screen-2-view"
-        
       }
     ]
   },
   "repository": "https://github.com/joaohcrangel/electron-screen-2-view.git",
   "author": "João Rangel",
   "devDependencies": {
-    "electron": "^3.0.10"
+    "electron": "^8.2.2",
+    "electron-builder": "^22.4.1"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "electron-log": "^2.2.17",
     "electron-updater": "^4.0.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "material-design-icons": "^3.0.1",
     "materialize-css": "^1.0.0-rc.2",
     "nedb": "^1.8.0",

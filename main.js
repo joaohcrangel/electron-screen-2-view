@@ -29,7 +29,10 @@ function createWindowExternal () {
       frame: false,
       titleBarStyle: 'hidden',
       backgroundColor: '#000000',
-      fullscreen: true
+      fullscreen: true,
+      webPreferences: {
+        nodeIntegration: true
+      }
     })
     if (DEBUG === true) secondWindow.webContents.openDevTools()
     secondWindow.loadFile('secondary.html')
@@ -105,9 +108,14 @@ function createWindowExternal () {
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800, 
-    height: 600
+    width: 1000, 
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true
+    }
   })
+
+  mainWindow.setMenu(null)
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')

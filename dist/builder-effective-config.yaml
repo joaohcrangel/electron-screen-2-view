@@ -1,0 +1,15 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.github.joaohcrangel.electron-screen-2-view
+productName: electron-screen-2-view
+mac:
+  category: your.app.category.type
+  target:
+    - zip
+    - dmg
+publish:
+  - provider: github
+    owner: joaohcrangel
+    repo: electron-screen-2-view
+electronVersion: 8.2.2
